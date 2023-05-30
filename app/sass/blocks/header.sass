@@ -1,0 +1,59 @@
+.header
+	background-color: #9498a4
+	color: #fff
+	&__top
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 10px 0
+	&__bottom
+		display: flex
+		flex-direction: column
+		align-items: center
+		text-align: center
+		padding: 130px 0
+	&__title
+		margin-bottom: 20px
+		font-weight: 700
+	&__subtitle
+		font-weight: 500
+
+.menu
+	display: flex
+	justify-content: space-between
+	align-items: center
+	gap: 30px
+	transition: all 0.1s ease
+	@include media-breakpoint-down(md)
+		position: absolute
+		background-color: #fff
+		padding: 10px 15px
+		top: 50px
+		border-radius: 8px
+		flex-direction: column
+		gap: 0
+		align-items: flex-start
+		&:not(.show)
+			opacity: 0
+			visibility: hidden
+			position: absolute
+	&__item
+		padding: 7px 0
+		color: #fff
+		@include media-breakpoint-down(md)
+			color: #000
+
+.burger
+	@include media-breakpoint-up(md)
+		display: none
+
+.logo
+	color: #fff
+	@include media-breakpoint-down(md)
+		display: none
+
+.social
+	display: flex
+	gap: 6px
+	&__item
+		padding: 7px

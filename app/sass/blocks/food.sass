@@ -1,0 +1,43 @@
+.dish
+	&__item
+		display: flex
+		gap: 40px
+		@include media-breakpoint-down(sm)
+			gap: 20px
+		&:not(&:first-child)
+			padding-top: 30px
+		&:not(&:last-child)
+			padding-bottom: 30px
+			border-bottom: 2px solid $dark
+	&__image
+		display: block
+		width: 180px
+		height: 180px
+		border-radius: 180px
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat
+		@include media-breakpoint-down(md)
+			height: 140px
+			width: 140px
+		@include media-breakpoint-down(sm)
+			height: 120px
+			width: 120px
+	&__info
+		display: flex
+		flex-direction: column
+		justify-content: center
+		flex: 1 0
+	&__title
+		font-weight: 700
+		font-size: 26px
+		@include media-breakpoint-down(md)
+			font-size: 21px
+		@include media-breakpoint-down(sm)
+			font-size: 18px
+	&__price
+		font-weight: 700
+		font-size: 20px
+		color: $accent
+		@include media-breakpoint-down(md)
+			font-size: 16px
